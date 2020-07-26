@@ -10,6 +10,6 @@ function [b, v] = betaVegaCalc(s, c, d, r, w, pop)
         r2 = d(t2) + r(t2);
         r1 = d(t) + r(t);
         v = [v (r2-r1)/i1];
-        b = [b (s1-s2)*pop*1/i1*1/s1];
+        b = [b (s1-s2)/(i1.*s1)];
     end
 end
